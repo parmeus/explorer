@@ -22,8 +22,8 @@ const SearchTypes = [
         withTraitOption: true,
         tip: "Find the simularity among addresses with following traits",
         placeHolder:
-            "Addresses seperated by ';' , ex: 0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B;0x18c081B0ed72bd5D11192Ff7584214dAB265d218",
-        defaultSearch: "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B;0x18c081B0ed72bd5D11192Ff7584214dAB265d218",
+            "Addresses seperated by ';' , ex: 0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B;0x18c081B0ed72bd5D11192Ff7584214dAB265...",
+        defaultSearch: "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B;0x18c081B0ed72bd5D11192Ff7584214dAB265d218;0x048d73b36921321878c7fd9d8d2c2c69857b6784;0x27103c2e31b51cd8a8d0c09415c10016e81ed963;0x01e4fbb2cea00da319f786525c5f568e41e688e7;0xc359ee496265231e9f38359fe1fc3a7b0bc857df;0x3d005090005723e2f8391ada83d77da0d9700783;0x807b3cf6a5110d55b4664cfc65282ecc55e9cdea",
         searchAction: RestService.TeamMatch,
     },
     {
