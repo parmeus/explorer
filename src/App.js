@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, useRoutes } from "react-router-dom";
+import { useRoutes, HashRouter } from "react-router-dom";
 import RouteConfig from "./routes";
 
 const Root = () => {
@@ -11,9 +11,9 @@ const Root = () => {
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Root />
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
