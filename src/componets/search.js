@@ -140,7 +140,7 @@ const Search = ({ redirectMode = false, autoSearch = false, onSearchResult = () 
 
     useEffect(() => {
         if (autoSearch && !autoSearched) {
-            const params = new URLSearchParams(window.location.search);
+            const params = new URLSearchParams(window.location.href.replace(/^(.*)\?(.+)$/g,(m,g1,g2) => g2));
             const searchTypeKey = params.get("type");
             const traits = params.get("traits");
             const text = params.get("text");
