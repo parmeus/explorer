@@ -7,7 +7,7 @@ const HomePage = () => {
         <StyledContainer>
             <div className="logo">Parmeus</div>
             <div className="body-contianer">
-                <div className="title">Parmeus Explorer</div>
+                <div className="title">Parmeus Inspector</div>
                 <div className="search-block">
                     <Search redirectMode={true} />
                 </div>
