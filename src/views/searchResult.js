@@ -4,13 +4,11 @@ import SearchResultBody from "../componets/search-result-body";
 import Search from "../componets/search";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 
 const SearchResult = () => {
     const [resultSearchType, setResultSearchType] = useState();
     const [resultData, setResultData] = useState();
     const [isSearching, setIsSearching] = useState(false);
-    const navigate = useNavigate();
 
     const onSearchResult = useCallback((searchType, result) => {
         setResultSearchType(searchType);
@@ -21,11 +19,11 @@ const SearchResult = () => {
         <StyledContainer>
             <div className="logo">
                 <span
-                    onClick={() => {
-                        navigate("/", {
-                            replace: true,
-                        });
-                    }}
+                    // onClick={() => {
+                    //     navigate("/", {
+                    //         replace: true,
+                    //     });
+                    // }}
                 >
                     Parmeus
                 </span>
@@ -55,7 +53,7 @@ const StyledContainer = styled.div.attrs({
         font-weight: 700;
         font-size: 24px;
         color: rgb(255, 255, 255);
-        cursor: pointer;
+        /* cursor: pointer; */
     }
 
     .limit-width-container {
