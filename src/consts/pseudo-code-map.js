@@ -1,13 +1,10 @@
 const PseudoCodeMap = {
     singleMatch: {
         api: `
-# method
-POST
+POST /api/1/recommendation/similarities HTTP/1.1
 
-# path
-/api/1/recommendation/similarities
+Content-Type: application/json
 
-# request body
 {
     "digitalSelf": {
         "address": "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B"
@@ -54,13 +51,10 @@ let findSimilarities = await findSimilarities(
 
     teamMatch: {
         api: `
-# method
-POST
+POST /api/1/recommendation/similarityMatrix HTTP/1.1
 
-# path
-/api/1/recommendation/similarityMatrix
+Content-Type: application/json
 
-# request body
 {
     "digitalSelves": [
         {
@@ -124,11 +118,7 @@ let similarityMatrix = await similarityMatrix(
 
     parmeusIdentity: {
         api: `
-# method
-GET
-
-# path
-/api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B
+GET /api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B HTTP/1.1
 
         `,
         js: `
@@ -139,11 +129,7 @@ let parmeusIdentity = await parmeusIdentity(
     } ,
     isHuman: {
         api: `
-# method
-GET
-
-# path
-/api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B/psbts/humanity
+GET /api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B/psbts/humanity HTTP/1.1
         `,
         js: `
 let isHuman = await isHuman(
