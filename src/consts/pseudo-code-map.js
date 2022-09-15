@@ -28,7 +28,7 @@ Content-Type: application/json
         `,
         js: `
 let findSimilarities = await findSimilarities(
-    "0xa0BcEeffDf6FA19A5e4Ac5117B97CE180Cd7039a",
+    "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B",
     {
         "sort": "desc",
         "count": 20,
@@ -98,8 +98,14 @@ Content-Type: application/json
         js: `
 let similarityMatrix = await similarityMatrix(
     [
-        "0xa0BcEeffDf6FA19A5e4Ac5117B97CE180Cd7039a",
-        "0x625Abfe8dA14930279Dc8B60AcF78bA9551C1895"
+        "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B",
+        "0x18c081B0ed72bd5D11192Ff7584214dAB265d218",
+        "0x048d73b36921321878c7fd9d8d2c2c69857b6784",
+        "0x27103c2e31b51cd8a8d0c09415c10016e81ed963",
+        "0x01e4fbb2cea00da319f786525c5f568e41e688e7",
+        "0xc359ee496265231e9f38359fe1fc3a7b0bc857df",
+        "0x3d005090005723e2f8391ada83d77da0d9700783",
+        "0x807b3cf6a5110d55b4664cfc65282ecc55e9cdea"
     ],
     {
         "traits": [
@@ -123,7 +129,7 @@ GET /api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B HTTP/1.
         `,
         js: `
 let parmeusIdentity = await parmeusIdentity(
-    "0x625Abfe8dA14930279Dc8B60AcF78bA9551C1895"
+    "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B"
 );
         `
     } ,
@@ -133,7 +139,7 @@ GET /api/1/identity/addresses/0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B/psbts/h
         `,
         js: `
 let isHuman = await isHuman(
-    "0x625Abfe8dA14930279Dc8B60AcF78bA9551C1895"
+    "0x80567F7200fd57f7FDb1DBe39960B600dC9B6d2B"
 );
         `
     },
