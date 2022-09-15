@@ -1,4 +1,4 @@
-import { Drawer } from "antd";
+import { Drawer, Tabs } from "antd";
 import { LinkOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -36,7 +36,7 @@ const SearchResultBody = ({ searchType, resultData }) => {
     return (
         <StyledContainer>
             <Drawer
-                title="Code(JavaScript)"
+                title="Code"
                 placement="right"
                 closable={false}
                 onClose={() => setIscodeDrawerVisible(false)}
@@ -44,11 +44,23 @@ const SearchResultBody = ({ searchType, resultData }) => {
                 key="code-draw"
                 width="700px"
             >
-                <HighCode
-                    langName="javascript"
-                    codeValue={searchType?.key ? PseudoCodeMap[searchType?.key] : null}
-                    width="100%"
-                ></HighCode>
+                <Tabs>
+                    <Tabs.TabPane tab="API" key="api">
+                        <HighCode
+                            langName="API"
+                            codeValue={searchType?.key ? PseudoCodeMap[searchType?.key]?.['api'] : null}
+                            width="100%"
+                        ></HighCode>
+                    </Tabs.TabPane>
+                    <Tabs.TabPane tab="Javascript" key="js">
+                        <HighCode
+                            langName="Javascript"
+                            codeValue={searchType?.key ? PseudoCodeMap[searchType?.key]?.['js'] : null}
+                            width="100%"
+                        ></HighCode>
+                    </Tabs.TabPane>
+                </Tabs>
+                
             </Drawer>
 
             <div className="result-container">
