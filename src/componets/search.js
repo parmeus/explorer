@@ -134,6 +134,12 @@ const Search = ({ redirectMode = false, autoSearch = false, onSearchResult = () 
         }
     }, [searchText, currentSelectedTraits, redirectMode, currentSearchType, navigate, search]);
 
+    const onInputKeypress = useCallback(event => {
+        if(event.key === 'Enter'){
+            onSearch();
+        }
+    }, [onSearch])
+
     const onTraitSelected = useCallback(selectedTraits => {
         setCurrentSelectedTraits(selectedTraits);
     }, []);
@@ -172,6 +178,7 @@ const Search = ({ redirectMode = false, autoSearch = false, onSearchResult = () 
                 placeholder={currentSearchType?.placeHolder ?? "Please enter address"}
                 value={searchText}
                 onChange={onInputTextChange}
+                onKeyUp={onInputKeypress}
                 disabled={isSearching}
             />
             <Dropdown
@@ -241,6 +248,17 @@ const StyledContainer = styled.div.attrs({
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media screen and (max-width: 768px) {
+                width: 120px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 10px;
+            height: 30px;
+            top: 14px;
+            left: 14px;
         }
     }
     .search-input {
@@ -254,6 +272,11 @@ const StyledContainer = styled.div.attrs({
         &:focus {
             border: none;
             background-color: #353535;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 0 0 0 140px;
+            height: 60px;
         }
     }
     .search-button {
@@ -278,16 +301,28 @@ const StyledContainer = styled.div.attrs({
             rgb(82, 217, 255) 130.08%
         );
         border-radius: 32px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
     .tip {
         margin-top: 10px;
         font-size: 14px;
         color: #888888;
         margin-left: 35px;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 20px;
+        }
     }
     .traits-option-block {
         padding: 10px 35px;
         display: none;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 20px;
+        }
 
         &.visible {
             display: block;

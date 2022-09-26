@@ -42,7 +42,7 @@ const SearchResultBody = ({ searchType, resultData }) => {
                 onClose={() => setIscodeDrawerVisible(false)}
                 visible={iscodeDrawerVisible}
                 key="code-draw"
-                width="700px"
+                width= {window.screen.width > 768 ? "700px" : '90%'} 
             >
                 <Tabs>
                     <Tabs.TabPane tab="API" key="api">
@@ -80,6 +80,13 @@ const StyledContainer = styled.div`
         cursor: pointer;
         color: #4640f7;
         margin-bottom: 10px;
+    }
+
+    .result-data-block{
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+            overflow-x: auto;
+        }
     }
 `;
 
