@@ -36,6 +36,10 @@ const StyledContainer = styled.div`
         /* justify-content: center; */
         padding-top: 80px;
 
+        @media screen and (max-width: 768px) {
+            padding-top: 40px;
+        }
+
         .title {
             color: #fff;
             font-size: 86px;
@@ -43,9 +47,17 @@ const StyledContainer = styled.div`
             /* font-style: italic; */
             text-align: center;
             margin-bottom: 60px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 32px;
+            }
         }
         .search-block {
             padding: 0 200px;
+            
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
         }
     }
 `;
