@@ -180,6 +180,7 @@ const Search = ({ redirectMode = false, autoSearch = false, onSearchResult = () 
                 onChange={onInputTextChange}
                 onKeyUp={onInputKeypress}
                 disabled={isSearching}
+                enterkeyhint="search"
             />
             <Dropdown
                 className="type-dropdown"
